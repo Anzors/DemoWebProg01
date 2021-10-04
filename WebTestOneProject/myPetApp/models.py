@@ -13,6 +13,6 @@ class Pet(models.Model):
     submission_date = models.DateTimeField()
     vaccinations = models.ManyToManyField('Vaccine', blank=True)
 
-    class Vaccine (models.Model):
-        name = models.CharField(max_length=50)
+class Vaccine (models.Model):
+    name = models.CharField(max_length=50)
         
