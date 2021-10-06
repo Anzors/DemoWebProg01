@@ -1,0 +1,17 @@
+<!doctype html>
+<head>
+    <title> Anzors Pet Parlour </title>
+    <ul>
+        {% for pet in pets %}
+        <li>
+            <a href="{% url 'pet_detail' pet.id %}">
+                {{pet.name | capfirst}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</head>
+<body>
+        <h1> My Pet Adoption Agency </h1>
+</body>
+</html>
