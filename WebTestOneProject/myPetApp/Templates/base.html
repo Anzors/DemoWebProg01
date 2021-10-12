@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <!--Normal header stuff-->
+    </head>
+    <body>
+        <!--Common body header stuff-->
+        My common header
+        <img src = "{% static 'images/astra.jpg' %}" alt="Vauhxal Astra">
+        {% block content %}
+
+        {% endblock %}
+        <!--Common footer stuff-->
+        My common footer 
+    </body>
+</html>

@@ -1,6 +1,5 @@
-<!doctype html>
-<head>
-    <title> Anzors Pet Parlour </title>
+{% extends "base.html" %}
+{% block content %}
     <ul>
         {% for pet in pets %}
         <li>
@@ -10,8 +9,4 @@
         </li>
         {% endfor %}
     </ul>
-</head>
-<body>
-        <h1> My Pet Adoption Agency </h1>
-</body>
-</html>
+{% endblock %}
