@@ -1,15 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
     
-    <h1>Pet name is :{{ pet.name }}</h1>
+    <h2>Pet name is : {{ pet.name }}</h2>
 
-    <h2>Pet age is :{{ pet.age }}</h2>
+    <p>Pet age is : {{ pet.age }}</p>
 
-    <h3>Pet breed is: {{ pet.breed }} </h3>
+    <p>Pet breed is: {{ pet.breed }} </p>
 
-    <h4>Pet sex is: {{ pet.sex }} </h4>
+    <p>Pet sex is: {{ pet.sex }} <p>
 
-    <h5>Pet vaccinations are {{pet.vaccinations }}</h5>
+    <p> Vaccinations for :
+        <ul> 
+            {% if pet.vaccinations.all %}
+            {% for vaccinations in pet.vaccinations.all %}
+                <li> {{vaccinations.name }}</li>
+                {% endfor %}
+            {% else %}
+            <li> None </li>
+            {% endif %}
+        </ul>
+    </p>
+
+    <p> Submitter is : {{ pet.submitter }}</p>
+
+    <p> Description is : {{ pet.description }}</p>
+
+    <p> Submitter date is : {{ pet.submission_date }}</p>
 
 
 

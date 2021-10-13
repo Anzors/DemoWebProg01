@@ -2,14 +2,17 @@
 <!DOCTYPE html>
     <head>
         <!--Normal header stuff-->
-        <!--<link rel="stylesheet" href="Calculator.css">-->
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        
         
     <title> My pet stats </title>
     </head>
     <body>
         <!--Common body header stuff-->
-        This are the pet stats
-        <img src = "{% static 'images/astra.jpg' %}" alt="Vauhxal Astra">
+        
+        <img src = "{% static 'images/download.jpg' %}" alt="picture">
+
+        <h1> This are the pet stats </h1>
         {% block content %}
 
         {% endblock %}
